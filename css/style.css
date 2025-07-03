@@ -1,0 +1,489 @@
+*{
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0; 
+    z-index: 1000; 
+}
+
+
+.nav-left img {  
+    height: 80px;
+    margin-left: 20px;
+}
+.logo {
+    height: 30px; 
+    width: auto;
+    max-width: 100px; 
+    vertical-align: middle;
+}
+
+nav{
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    position: sticky;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+.nav-left ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-left ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 13px;
+    font-weight: 600;
+    font-style: normal;
+    color: rgb(45, 44, 44);
+}
+
+.nav-left ul li a {
+    text-decoration: none;
+    color:rgb(45, 44, 44);
+}
+
+
+
+.nav-left ul li a:hover{
+    text-decoration: line ;
+    color: #f44336;
+
+}
+
+
+
+.search-bar {
+    background-color: #f0eeee;
+    width: 350px; 
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin-right: 20px;
+    padding: 0 10px; 
+    display: flex; 
+    align-items: center;
+    font-size: 15px;
+    color: rgb(78, 77, 77);
+}
+
+/* Input inside search bar */
+.search-bar input {
+    background: transparent;
+    border: 0;
+    outline: none;
+    width: 90%; 
+    padding: 0; 
+    margin: 0;
+}
+
+/* Icon inside search bar */
+.search-bar i {
+    color: #ff4500;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.nav-right div {
+    margin: 0 10px;
+    display: flex;
+    align-items: center; 
+}
+
+.nav-right div p {
+   margin: 0;
+   font-weight: 500; 
+   text-decoration: none;
+}
+
+.nav-right i {
+    color: #ff4500; 
+    font-size: 18px; 
+    margin-right: 5px; 
+    vertical-align: middle;
+}
+
+.nav-right a {
+    display: flex;
+    align-items: center; 
+    line-height: 1.5; 
+    text-decoration: none; 
+    color: black;
+}
+
+.nav-right i:hover {
+  background-color: #FF4500;
+  color: #efefef;
+  border-radius: 50%; 
+}
+/*dropdown cha*/
+
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.profile-link p {
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+/* Dropdown Menu */
+.dropdown-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    border-radius: 8px; 
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-10px); 
+}
+
+
+.show-dropdown {
+    display: block;
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+/* Dropdown item styles */
+.dropdown-options li {
+    margin-bottom: 10px;
+}
+
+.dropdown-options li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    display: block;
+    border-radius: 5px; 
+}
+
+/* Hover effect for dropdown links */
+.dropdown-options li a:hover {
+    background-color: #FF4500; 
+    color: white; 
+    transform: translateX(5px); 
+    box-shadow: 0px 4px 8px rgba(255, 165, 0, 0.3); 
+}
+
+
+.show-dropdown {
+    display: block;
+}
+
+
+.profile-link.active p {
+    color: #FF4500; 
+    border-bottom: 2px solid #FF4500; 
+}
+
+.dropdown-options li a.active {
+    background-color: #FF4500; 
+    color: white; 
+}
+
+
+/*main part*/
+.main{
+    background-color: white;
+}
+
+.main__container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px;
+}
+
+.main__content h1{
+    margin-block: 8px 40px;
+    font-size: 55px; 
+    line-height: 1.2;
+    margin-top : 40px;
+}
+
+.main__content p{
+    font-size :15px ;
+    margin-top: 40px;
+}
+.main_img--container{
+    margin-left: 40px;
+
+}
+.main__btn{
+    background-color: transparent;  
+    border: 2px solid #FF4500;      
+    color: #FF4500;                 
+    padding: 10px 20px;             
+    border-radius: 10px;            
+    font-size: 16px;                
+    cursor: pointer;
+    display: inline-block;                 
+    transition: all 0.3s ease; 
+    margin-bottom: 60px;   
+    
+}
+
+.main__btn a {
+    text-decoration: none;
+    color: #FF4500;
+}
+
+.main__btn:hover {
+    background-color: #ff4500;
+}
+
+.main__btn:hover a {
+    color: white;
+}
+
+.heading{
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 50px;
+    margin-top: 10px;
+}
+.how-it-works h1{
+    text-align: center;
+    font-size: 50px;
+}
+.steps-container {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    width: 100%; 
+}
+
+.step-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.step-box:hover {
+    transform: translateY(-10px);
+}
+
+.step-box img {
+    width: 200px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+}
+
+.step-box h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.step-box p {
+    color: black;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.slider{
+    width: 100%;
+    height: 100vh;
+    background: #f6fbff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+    
+
+}
+.slider h1{
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.review_box{
+    width: 90%;
+    max-width: 700px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: -10px 10px 40px rgba(0,0,0,.25);
+    position: relative;
+     overflow: hidden;
+     top: -20px;
+    
+}
+.card{
+    height: 300px;
+    padding: 20px;
+    color: #f0eeee;
+    line-height: 22px;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+.card p{
+    color: black;
+
+}
+.profile{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px; 
+    margin-top: -10px; 
+    color: black;
+}
+.profile img {
+    width: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+    
+}
+.profile h3{
+    font-size: 20px;
+    color: #FF4500;
+}
+#slide{
+    width: 100%;
+    padding-right: 60px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left:0;
+    transition-duration: 0.5s;
+   
+}
+.slidebar{
+    width: 60px;
+    height: 100%;
+    padding: 15px 0;
+    box-sizing: border-box;
+    background-color: #f44336;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.slidebar img {
+    width:35px;
+    padding: 5px;
+    background: #fff;
+    border-radius: 50%;
+    cursor:pointer;
+}
+
+::selection{
+    background-color: #f44336;
+    color: #fff;
+}
+.footer {
+    margin-top: 150px;
+    width:100%;
+    padding: 100px 15%;
+    background: #ff4500;
+    color: #efefef;
+    display: flex ;
+    position: sticky;
+}
+
+.footer div{
+    text-align: center;
+    
+}
+.col-2{
+    flex-grow: 2;
+}
+.footer div h3{
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+.col-1 a{
+ display: block;
+ text-decoration: none;
+ color: #efefef;
+ margin-bottom: 10px;
+}
+form input{
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+}
+form button{
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px ;
+    cursor: pointer;
+}
+.social-icon{
+    margin-top: 30px;
+}
+.social-icon i{
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+.copyright{
+    text-align: center;
+    font-size: 14px;
+    margin: 0;
+}

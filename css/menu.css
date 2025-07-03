@@ -1,0 +1,572 @@
+*{
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0; 
+  z-index: 1000; 
+}
+
+
+.nav-left img {  
+  height: 80px;
+  margin-left: 20px;
+}
+.logo {
+  height: 30px; /* Adjust height as needed */
+  width: auto;
+  max-width: 100px; /* Prevent the logo from getting too large */
+  vertical-align: middle;
+}
+
+nav{
+  width: 100%; /* Ensures nav takes up the full width */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  position: sticky;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+  
+  
+}
+
+.nav-left ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-left ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 13px;
+  font-weight: 600;
+  font-style: normal;
+  color: rgb(45, 44, 44);
+}
+
+.nav-left ul li a {
+  text-decoration: none;
+  color:rgb(45, 44, 44);
+}
+
+
+
+.nav-left ul li a:hover{
+  text-decoration: line ;
+  color: #f44336;
+
+}
+
+
+
+.search-bar {
+  background-color: #f0eeee;
+  width: 350px; /* Reduced width to 250px, adjust as necessary */
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-right: 20px;
+  padding: 0 10px; /* Adjusted padding to avoid inner input padding conflicts */
+  display: flex; /* Allows better control over input and icon alignment */
+  align-items: center;
+  font-size: 15px;
+  color: rgb(14, 13, 13);
+}
+
+/* Input inside search bar */
+.search-bar input {
+  background: transparent;
+  border: 0;
+  outline: none;
+  width: 90%; /* Takes up available space within .search-bar */
+  padding: 0; /* Reset padding to avoid overlap */
+  margin: 0; /* Reset margin */
+}
+
+/* Icon inside search bar */
+.search-bar i {
+  color: #ff4500;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center; /* Vertically centers the items */
+  justify-content: center;
+}
+
+.nav-right div {
+  margin: 0 10px;
+  display: flex;
+  align-items: center; 
+}
+
+.nav-right div p {
+ margin: 0;
+ font-weight: 500; 
+ text-decoration: none;
+}
+
+.nav-right i {
+  color: #ff4500; 
+  font-size: 18px; 
+  margin-right: 5px; 
+  vertical-align: middle;
+}
+
+.nav-right a {
+  display: flex;
+  align-items: center; 
+  line-height: 1.5; 
+  text-decoration: none; 
+  color: black;
+}
+
+.nav-right i:hover {
+background-color: #FF4500;
+color: #efefef;
+border-radius: 50%; 
+}
+/*dropdown cha*/
+/* Profile Dropdown Container */
+.profile-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.profile-link p {
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+/* Dropdown Menu */
+.dropdown-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+  border-radius: 8px; /* Add rounded corners */
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(-10px); /* Drop down effect */
+}
+
+/* Animate dropdown on display */
+.show-dropdown {
+  display: block;
+  opacity: 1;
+  transform: translateY(0); /* Make the dropdown "drop down" */
+}
+
+/* Dropdown item styles */
+.dropdown-options li {
+  margin-bottom: 10px;
+}
+
+.dropdown-options li a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  display: block;
+  border-radius: 5px; /* Rounded corners for each link */
+}
+
+/* Hover effect for dropdown links */
+.dropdown-options li a:hover {
+  background-color: #FF4500; /* Orange background on hover */
+  color: white; /* White text when hovered */
+  transform: translateX(5px); /* Slight slide effect on hover */
+  box-shadow: 0px 4px 8px rgba(255, 165, 0, 0.3); /* Add subtle shadow */
+}
+
+/* Show dropdown when clicked */
+.show-dropdown {
+  display: block;
+}
+
+/* Highlight when active */
+.profile-link.active p {
+  color: #FF4500; /* Change color to orange */
+  border-bottom: 2px solid #FF4500; /* Add orange underline */
+}
+
+.dropdown-options li a.active {
+  background-color: #FF4500; /* Highlight dropdown items */
+  color: white; /* White text color */
+}
+
+
+/*main part*/
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #fcfbfa;
+  border-radius: 15px;
+  margin: 90px auto;
+  width: 90%;
+  max-width: 1200px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Times New Roman', serif;
+}
+
+.text-content {
+  width: 50%;
+}
+
+h1 {
+  font-size: 48px;
+  color: #ff4500;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.image-content {
+  width: 45%;
+}
+
+.image-content img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.btn {
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background-color: #e04a00;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  background-color: #cc4200;
+  transform: translateY(1px);
+}
+
+/*whats on your mind ka part*/
+/* Slides Container */
+/* Slides Container */
+.slides {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.slides h1 {
+  font-size: 50px;
+  color: #FF4500;
+  margin-bottom: 20px;
+}
+
+/* Slider Styling */
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: calc(100% / 3); /* Adjust the number here for how many items to show at once */
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/* Horizontal rectangular items */
+.item {
+  background-color: #fff5e1;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left; /* Align text to the left */
+  transition: transform 0.3s ease-in-out;
+  display: flex; /* Use flexbox for horizontal layout */
+  align-items: center; /* Center items vertically */
+  height: 100px; /* Height for the rectangular shape */
+  width: 100%; /* Each item takes full width of the slide */
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.icon-container {
+  background-color: #ff974d;
+  border-radius: 50%;
+  padding: 15px; /* Adjust padding */
+  margin-right: 15px; /* Space between icon and text */
+}
+
+.icon-container i {
+  font-size: 32px;
+  color: white;
+}
+.item span a{
+  text-decoration: none;
+}
+.item span a :hover{
+  text-decoration: none;
+}
+
+.item span {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
+
+/* Slider Arrows */
+.prev, .next {
+  background-color: #FF4500;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  opacity: 0.9;
+}
+
+/* Ensure arrows are fully visible */
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+  background-color: #e04a00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slide {
+    min-width: 50%; /* Adjust width for smaller screens */
+  }
+
+  .prev, .next {
+    font-size: 20px;
+    padding: 8px 16px;
+  }
+}
+
+
+/*ai ka part*/
+/* Hero Section Styles */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 15px;
+  margin: 60px auto;
+  width: 90%;
+  max-width: 1200px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  padding: 15px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  width: 100%;
+  outline: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.AI-btn {
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.AI-btn:hover {
+  background-color: #e04a00;
+  transform: translateY(-2px);
+}
+
+.hero-img {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  max-height: 350px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .hero-content, .hero-img {
+      width: 100%;
+  }
+
+  .hero-img {
+      margin-top: 20px;
+  }
+}
+.footer {
+  margin-top: 150px;
+  width:100%;
+  padding: 100px 15%;
+  background: #ff4500;
+  color: #efefef;
+  display: flex ;
+  position: sticky;
+}
+
+.footer div{
+  text-align: center;
+  
+}
+.col-2{
+  flex-grow: 2;
+}
+.footer div h3{
+  font-weight: 300;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+.col-1 a{
+display: block;
+text-decoration: none;
+color: #efefef;
+margin-bottom: 10px;
+}
+.col-3 div{
+  color: white;
+}
+form input{
+  width: 400px;
+  height: 45px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  outline: none;
+  border: none;
+}
+form button{
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: 15px ;
+  cursor: pointer;
+}
+.social-icon{
+  margin-top: 30px;
+}
+.social-icon i{
+  font-size: 22px;
+  margin: 10px;
+  cursor: pointer;
+}
+.copyright{
+  text-align: center;
+  font-size: 14px;
+  margin: 0;
+}
+
+

@@ -1,0 +1,332 @@
+*{
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  header {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0; 
+    z-index: 1000; 
+  }
+  
+  
+  .nav-left img {  
+    height: 80px;
+    margin-left: 20px;
+  }
+  .logo {
+    height: 30px; /* Adjust height as needed */
+    width: auto;
+    max-width: 100px; /* Prevent the logo from getting too large */
+    vertical-align: middle;
+  }
+  
+  nav{
+    width: 100%; /* Ensures nav takes up the full width */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    position: sticky;
+  }
+  
+  .nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    
+    
+  }
+  
+  .nav-left ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav-left ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 13px;
+    font-weight: 600;
+    font-style: normal;
+    color: rgb(45, 44, 44);
+  }
+  
+  .nav-left ul li a {
+    text-decoration: none;
+    color:rgb(45, 44, 44);
+  }
+  
+  
+  
+  .nav-left ul li a:hover{
+    text-decoration: line ;
+    color: #f44336;
+  
+  }
+  
+  
+  
+  .search-bar {
+    background-color: #f0eeee;
+    width: 350px; /* Reduced width to 250px, adjust as necessary */
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin-right: 20px;
+    padding: 0 10px; /* Adjusted padding to avoid inner input padding conflicts */
+    display: flex; /* Allows better control over input and icon alignment */
+    align-items: center;
+    font-size: 15px;
+    color: rgb(14, 13, 13);
+  }
+  
+  /* Input inside search bar */
+  .search-bar input {
+    background: transparent;
+    border: 0;
+    outline: none;
+    width: 90%; /* Takes up available space within .search-bar */
+    padding: 0; /* Reset padding to avoid overlap */
+    margin: 0; /* Reset margin */
+  }
+  
+  /* Icon inside search bar */
+  .search-bar i {
+    color: #ff4500;
+    font-size: 18px;
+    margin-right: 5px;
+  }
+  
+  .nav-right {
+    display: flex;
+    align-items: center; /* Vertically centers the items */
+    justify-content: center;
+  }
+  
+  .nav-right div {
+    margin: 0 10px;
+    display: flex;
+    align-items: center; 
+  }
+  
+  .nav-right div p {
+   margin: 0;
+   font-weight: 500; 
+   text-decoration: none;
+  }
+  
+  .nav-right i {
+    color: #ff4500; 
+    font-size: 18px; 
+    margin-right: 5px; 
+    vertical-align: middle;
+  }
+  
+  .nav-right a {
+    display: flex;
+    align-items: center; 
+    line-height: 1.5; 
+    text-decoration: none; 
+    color: black;
+  }
+  
+  .nav-right i:hover {
+  background-color: #FF4500;
+  color: #efefef;
+  border-radius: 50%; 
+  }
+  /*dropdown cha*/
+  /* Profile Dropdown Container */
+  .profile-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .profile-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .profile-link p {
+    margin: 0;
+    transition: all 0.3s ease;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    border-radius: 8px; /* Add rounded corners */
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-10px); /* Drop down effect */
+  }
+  
+  /* Animate dropdown on display */
+  .show-dropdown {
+    display: block;
+    opacity: 1;
+    transform: translateY(0); /* Make the dropdown "drop down" */
+  }
+  
+  /* Dropdown item styles */
+  .dropdown-options li {
+    margin-bottom: 10px;
+  }
+  
+  .dropdown-options li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    display: block;
+    border-radius: 5px; /* Rounded corners for each link */
+  }
+  
+  /* Hover effect for dropdown links */
+  .dropdown-options li a:hover {
+    background-color: #FF4500; /* Orange background on hover */
+    color: white; /* White text when hovered */
+    transform: translateX(5px); /* Slight slide effect on hover */
+    box-shadow: 0px 4px 8px rgba(255, 165, 0, 0.3); /* Add subtle shadow */
+  }
+  
+  /* Show dropdown when clicked */
+  .show-dropdown {
+    display: block;
+  }
+  
+  /* Highlight when active */
+  .profile-link.active p {
+    color: #FF4500; /* Change color to orange */
+    border-bottom: 2px solid #FF4500; /* Add orange underline */
+  }
+  
+  .dropdown-options li a.active {
+    background-color: #FF4500; /* Highlight dropdown items */
+    color: white; /* White text color */
+  }
+  
+  /*main part*/
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #FF4500;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.filter-button {
+  background-color: white;
+  color: #ff4500;
+  border: 2px solid #ff4500;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-button:hover {
+  background-color: #ff4500;
+  color: white;
+}
+
+.restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Ensure 3 items per row */
+  gap: 20px;
+}
+
+.restaurant-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-5px);
+}
+
+.restaurant-info a {
+  text-decoration: none;
+}
+
+
+.discount {
+  background-color: #ff4500; 
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 4px;
+}
+
+.restaurant-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.restaurant-info {
+  padding: 15px;
+}
+
+.restaurant-info h2 {
+  font-size: 1.2rem;
+  color: #ff4500; /* orangish-red color for the restaurant name */
+  margin-bottom: 8px;
+}
+
+.restaurant-info p {
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.rating {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #28a745; /* green color for rating */
+}
+
+.distance {
+  font-size: 0.9rem;
+  color: #888;
+}

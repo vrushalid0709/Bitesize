@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    overflow-y: auto;
+}
+
+body {
+    background: linear-gradient(to right, #e2e2e2, #fed3ba);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto; /* Change to auto for more space */
+    padding: 20px; /* Add some padding */
+    margin: 0; 
+    overflow-y: auto;
+}
+/* Main Container */
+.container {
+    width: 1200px;
+    height: auto;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 40px 0; /* Add top and bottom margin */
+}
+
+/* Left Section - Congratulations */
+.left-section {
+     background: linear-gradient(to right,#FFBF78,#ff7d29);
+    color: white; /* White font color */
+    width: 40%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.left-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.left-section p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.congrats-img {
+    width: 80%; /* Adjust the width to fit the section */
+    margin-top: 20px;
+    border-radius: 10px; /* Optional: adds rounded corners */
+}
+.right-section {
+    background-color: white; /* White background */
+    width: 60%;
+    padding: 60px;
+}
+
+form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb; /* Softer borders */
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+.radio-group label {
+    margin-right: 20px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Change color on selected radio button */
+input[type="radio"]:checked + label {
+    background-color: rgb(101, 239, 101); /* Light peach background */
+    color: black; /* Theme color for selected text */
+    border-color: rgb(101, 239, 101); /* Theme color for border */
+}
+
+/* Special case for Non-Vegetarian (change to red) */
+input[type="radio"]:checked#non-vegetarian + label {
+    background-color: #f8d7da; /* Light red background */
+    color: #721c24; /* Dark red text */
+    border-color: #f5c6cb; /* Light red border */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #111111; /* Formal gray */
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ff4500; /* Theme color for border */
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ff4500; /* Theme color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s ease; /* Smooth color change */
+}
+
+input[type="submit"]:hover {
+    background-color: #e84300; /* Slightly darker shade on hover */
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.radio-group label, .checkbox-group label {
+    margin-right: 20px;
+}
+
+/* Congratulations animation */
+.congratulations {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    color: rgb(250, 250, 250); /* Adjust if necessary */
+    text-align: center;
+    opacity: 0;
+    animation: fadeInSlide 2s forwards ease-in-out;
+}
+
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Submit button animation (on click pulse) */
+input[type="submit"]:active {
+    animation: pulse 0.3s ease-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Slight enlargement */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
